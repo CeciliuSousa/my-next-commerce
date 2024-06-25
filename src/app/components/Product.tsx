@@ -1,3 +1,4 @@
+import { formatPrice } from '@/lib/utils';
 import { ProductType } from '@/types/ProductsType';
 import ProductImage from './ProductImage';
 
@@ -12,10 +13,10 @@ export default function Product({ product }: ProductProps) {
         <ProductImage product={product} fill></ProductImage>
       </div>
 
-      <div className='flex justify-between font-bold my-3 '>
+      <div className='flex justify-between font-bold my-3 gap-6 '>
         {' '}
-        <p className='w-40 truncate'>{product.title} </p>
-        <p className='text-md text-teal-600'>{product.price}</p>
+        <p className='w-40 truncate'>{product.name} </p>
+        <p className='text-md text-teal-600'>{formatPrice(product.price)}</p>
       </div>
       <button className='rounded-md bg-teal-600 text-white px-3.5 py-2.5 text-sm text-center'>
         {' '}

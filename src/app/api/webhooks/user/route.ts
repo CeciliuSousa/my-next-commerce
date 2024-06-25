@@ -67,7 +67,7 @@ async function handler(request: Request) {
       create: {
         externalId: id as string,
         attributes,
-      },    
+      },
       update: {
         attributes,
       },
